@@ -12,7 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Pick up overlay for features that depend on non-open-source files
-DEVICE_PACKAGE_OVERLAYS := vendor/samsung/wave/overlay
-
-$(call inherit-product, vendor/samsung/wave/wave-vendor-blobs.mk)
+# All the blobs necessary for wave devices
+PRODUCT_COPY_FILES += \
+    vendor/samsung/wave/proprietary/samsung_mfc_fw.bin:system/vendor/firmware/samsung_mfc_fw.bin \
+    vendor/samsung/wave/proprietary/libEGL_POWERVR_SGX540_120.so:system/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so \
+    vendor/samsung/wave/proprietary/libGLESv1_CM_POWERVR_SGX540_120.so:system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so \
+    vendor/samsung/wave/proprietary/libGLESv2_POWERVR_SGX540_120.so:system/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so \
+    vendor/samsung/wave/proprietary/gralloc.wave.so:system/vendor/lib/hw/gralloc.wave.so \
+    vendor/samsung/wave/proprietary/libglslcompiler.so:system/vendor/lib/libglslcompiler.so \
+    vendor/samsung/wave/proprietary/libIMGegl.so:system/vendor/lib/libIMGegl.so \
+    vendor/samsung/wave/proprietary/libpvr2d.so:system/vendor/lib/libpvr2d.so \
+    vendor/samsung/wave/proprietary/libpvrANDROID_WSEGL.so:system/vendor/lib/libpvrANDROID_WSEGL.so \
+    vendor/samsung/wave/proprietary/libPVRScopeServices.so:system/vendor/lib/libPVRScopeServices.so \
+    vendor/samsung/wave/proprietary/libsrv_init.so:system/vendor/lib/libsrv_init.so \
+    vendor/samsung/wave/proprietary/libsrv_um.so:system/vendor/lib/libsrv_um.so \
+    vendor/samsung/wave/proprietary/libusc.so:system/vendor/lib/libusc.so \
+    vendor/samsung/wave/proprietary/libakm.so:system/vendor/lib/libakm.so
